@@ -2,61 +2,61 @@
 
 
 // Spokane
-$.simpleWeather({
-    location: 'Spokane',
-    unit: 'f',
-    success: function(weather) {
-      
-      // Display Data
-      $('.spokane .temp').text(weather.temp);
-      $('.spokane .city').text(weather.city);
-      $('.spokane img').attr('src', weather.image);
-      $('.spokane .title').text(weather.title);
-  
-      
-    //If this condition, show this icon
-        if ( 26 >= weather.code &&  30 <= weather.code ) {
-            $('.spokane .wi').addClass('wi-day-cloudy')
-        }
-        
-        
-      // Entire weather object
-      console.log(weather);
-    },
-    error: function(error) {
-      // Show if weather cannot be retreived
-    $('body').append('<p>No Weather. :|</p>')
-    }
-    
-  
-  });
+//$.simpleWeather({
+//    location: 'Spokane',
+//    unit: 'f',
+//    success: function(weather) {
+//      
+//      // Display Data
+//      $('.spokane .temp').text(weather.temp);
+//      $('.spokane .city').text(weather.city);
+//      $('.spokane img').attr('src', weather.image);
+//      $('.spokane .title').text(weather.title);
+//  
+//      
+//    //If this condition, show this icon
+//        if ( 26 >= weather.code &&  30 <= weather.code ) {
+//            $('.spokane .wi').addClass('wi-day-cloudy')
+//        }
+//        
+//        
+//      // Entire weather object
+//      console.log(weather);
+//    },
+//    error: function(error) {
+//      // Show if weather cannot be retreived
+//    $('body').append('<p>No Weather. :|</p>')
+//    }
+//    
+//  
+//  });
 
 
 
 
 // Seattle
-$.simpleWeather({
-    location: 'Seattle',
-    unit: 'f',
-    success: function(weather) {
-      
-      // Display Data
-      $('.seattle .temp').text(weather.temp);
-      $('.seattle .city').text(weather.city);
-      $('.seattle img').attr('src', weather.image);
-      $('.seattle .title').text(weather.title);
-  
-      
-      // Entire weather object
-      console.log(weather);
-    },
-    error: function(error) {
-      // Show if weather cannot be retreived
-    $('body').append('<p>No Weather. :|</p>')
-    }
-    
-  
-  });
+//$.simpleWeather({
+//    location: 'Seattle',
+//    unit: 'f',
+//    success: function(weather) {
+//      
+//      // Display Data
+//      $('.seattle .temp').text(weather.temp);
+//      $('.seattle .city').text(weather.city);
+//      $('.seattle img').attr('src', weather.image);
+//      $('.seattle .title').text(weather.title);
+//  
+//      
+//      // Entire weather object
+//      console.log(weather);
+//    },
+//    error: function(error) {
+//      // Show if weather cannot be retreived
+//    $('body').append('<p>No Weather. :|</p>')
+//    }
+//    
+//  
+//  });
 
 
 // On Click, Get Geolocation, Call Weather Function
@@ -88,6 +88,7 @@ var getWeather = function(location) {
     },
     error: function(error) {
       // Show if weather cannot be retreived
+        $('body').append('<p>No Weather. :|</p>')
     }
   
   });

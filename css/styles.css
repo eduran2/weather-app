@@ -12,9 +12,15 @@ YOUR STYLES
     box-sizing: border-box;
 }
 
+body {
+    background: url(../img/bg.jpg);
+}
 main {
-    background: grey;
-    margin: 1em;
+    background: rgba(0,0,0,.5);
+    width: 600px;
+    height: 600px;
+    border-radius: 3600px;
+    margin: 0 auto;
     padding: 1em;
     
     /*  FlexBox Layout  */
@@ -23,17 +29,30 @@ main {
 }
 
 section {
-    background: steelblue;
+    background: rgba(255,255,255,.8);
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    border-radius: 360px;
     padding: 1em;
-    margin: 1em;
+    margin:0 auto;
     
     /*  FlexBox for child  */
 
-    flex: 1 0 200px;
+/*    flex: 1 0 200px;*/
     
     /*  FlexBox as parent  */
 }
 
+img {
+    align-content: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 4em
+}
 /********************
 MEDIA QUERIES
 *******************/
@@ -44,11 +63,8 @@ MEDIA QUERIES
   and (min-width: 80em) { 
   
   /* Diagnostic Styling. */
-  body {
-       background: blue;
-  }
 
-}
+      
 
 /* Tablet */
 @media screen 
@@ -58,11 +74,8 @@ MEDIA QUERIES
   and (min-width: 48em)  {
 
   /* Diagnostic Styling. */
-  body {
-       background: green;
-  }
+  
 
-}
 
 /* Mobile */
 @media screen
@@ -72,8 +85,5 @@ MEDIA QUERIES
   and (min-width: 20em) { 
 
   /* Diagnostic Styling. */
-	body {
-       background: red;
-	}
-	
-}
+
+
